@@ -26,3 +26,15 @@ suitable location and the x and y coordinates in the following form:
 
 
 // Solution
+
+let optimumLocation = function(students, locations) {
+  let minDistance = Infinity;
+  let { x, y, id } = locations.reduce((best, item) => {
+    let { x, y } = item;
+    let totalDistance = students.reduce((d, [xs, ys]) => d + Math.abs(xs-x) + Math.abs(ys-y), 0);
+    if (totalDistance >= minDistance) return best;
+    minDistance = totalDistance;
+    return item;
+  }, null);
+  return `The best location is number ${id} with the coordinates x = ${x} and y = ${y}`;
+}
