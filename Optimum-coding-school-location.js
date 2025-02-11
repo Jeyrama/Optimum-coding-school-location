@@ -38,3 +38,5 @@ let optimumLocation = function(students, locations) {
   }, null);
   return `The best location is number ${id} with the coordinates x = ${x} and y = ${y}`;
 }
+
+// or
