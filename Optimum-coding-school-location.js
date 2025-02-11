@@ -40,3 +40,16 @@ let optimumLocation = function(students, locations) {
 }
 
 // or
+
+let optimumLocation = function(students, locations){
+  let bestdist=Infinity,best=0;
+  for (let i=0;i<locations.length;i++){
+    let totdist=0,x=locations[i].x,y=locations[i].y;
+    for (let j=0;j<students.length;j++){
+      totdist+=Math.abs(x-students[j][0]);
+      totdist+=Math.abs(y-students[j][1]);
+    }
+    if (totdist<bestdist){best=i;bestdist=totdist;}
+  }
+  return 'The best location is number '+locations[best].id+' with the coordinates x = '+locations[best].x+' and y = '+locations[best].y
+}
