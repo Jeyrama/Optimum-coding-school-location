@@ -41,7 +41,7 @@ let optimumLocation = function(students, locations) {
 
 // or
 
-let optimumLocation = function(students, locations){
+let optimum_Location = function(students, locations){
   let bestdist=Infinity,best=0;
   for (let i=0;i<locations.length;i++){
     let totdist=0,x=locations[i].x,y=locations[i].y;
