@@ -23,3 +23,6 @@ The desired output should consist of a string indicating the ID of the best
 suitable location and the x and y coordinates in the following form:
   "The best location is number 1 with the coordinates x = 3 and y = 4"
 */
+
+
+// Solution
